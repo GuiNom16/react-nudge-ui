@@ -18,18 +18,18 @@ A lightweight React component to subtly draw attention to UI elements with anima
 
 ## Installation
 
-npm install react-nudge
+npm install react-nudge-ui
 
 or with yarn:
 
-yarn add react-nudge
+yarn add react-nudge-ui
 
 ---
 
 ## Usage
 
 import React from "react";  
-import { Nudge } from "react-nudge";
+import { Nudge } from "react-nudge-ui";
 
 function App() {  
  return (
