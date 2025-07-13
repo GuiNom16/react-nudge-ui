@@ -50,23 +50,26 @@ export default App;
 
 ## Props
 
-| Prop               | Type              | Default    | Description                                             |
-| ------------------ | ----------------- | ---------- | ------------------------------------------------------- |
-| `children`         | React.ReactNode   | —          | The wrapped React element to highlight                  |
-| `hint`             | string            | undefined  | Tooltip message to display                              |
-| `duration`         | number            | 5000       | Time in milliseconds the nudge is visible               |
-| `ringColor`        | string            | #007bff    | Color of the animated ring                              |
-| `ringSize`         | number            | 8          | Thickness (in px) of the ring                           |
-| `ringBorderRadius` | string            | —          | Border radius of the ring (e.g., "12px", "50%")         |
-| `tooltipBgColor`   | string            | #333       | Background color of the tooltip                         |
-| `tooltipTextColor` | string            | #fff       | Text color of the tooltip                               |
-| `tooltipFontSize`  | string            | "14px"     | Font size of the tooltip text                           |
-| `tooltipPadding`   | string            | "6px 12px" | Padding inside the tooltip                              |
-| `tooltipPosition`  | "top" \| "bottom" | "top"      | Position of the tooltip relative to the wrapped element |
-| `tooltipFloating`  | boolean           | true       | Whether the tooltip floats with smooth animation        |
-| `className`        | string            | —          | Optional custom CSS class for the wrapper               |
-| `tooltipClassName` | string            | —          | Optional custom CSS class for the tooltip               |
-| `ringClassName`    | string            | —          | Optional custom CSS class for the ring                  |
+## Props
+
+| Prop               | Type              | Default    | Description                                      |
+| ------------------ | ----------------- | ---------- | ------------------------------------------------ |
+| `children`         | React.ReactNode   | —          | The wrapped React element to highlight           |
+| `hint`             | string            | —          | Tooltip message to display                       |
+| `duration`         | number            | 5000       | Time in milliseconds the nudge is visible        |
+| `ringColor`        | string            | `#007bff`  | Color of the animated ring                       |
+| `ringSize`         | number            | 8          | Thickness (in px) of the ring                    |
+| `ringBorderRadius` | string            | —          | Border radius of the ring (e.g., `12px`, `50%`)  |
+| `tooltipBgColor`   | string            | `#333`     | Background color of the tooltip                  |
+| `tooltipTextColor` | string            | `#fff`     | Text color of the tooltip                        |
+| `tooltipFontSize`  | string            | `14px`     | Font size of the tooltip text                    |
+| `tooltipPadding`   | string            | `6px 12px` | Padding inside the tooltip                       |
+| `tooltipPosition`  | "top" \| "bottom" | `"top"`    | Position of the tooltip relative to the element  |
+| `tooltipFloating`  | boolean           | `true`     | Whether the tooltip floats with smooth animation |
+| `zIndex`           | number            | —          | Custom stacking order for tooltip and ring       |
+| `className`        | string            | —          | Optional custom CSS class for the wrapper        |
+| `tooltipClassName` | string            | —          | Optional custom CSS class for the tooltip        |
+| `ringClassName`    | string            | —          | Optional custom CSS class for the ring           |
 
 ---
 

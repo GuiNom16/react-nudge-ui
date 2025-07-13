@@ -5,6 +5,7 @@ type NudgeProps = {
   children: React.ReactNode;
   hint?: string;
   duration?: number;
+  zIndex?: number;
 
   ringColor?: string;
   ringSize?: number;
@@ -26,6 +27,7 @@ export const Nudge: React.FC<NudgeProps> = ({
   children,
   hint,
   duration = 5000,
+  zIndex = 500,
   ringColor = "#007bff",
   ringSize = 8,
   ringBorderRadius,
@@ -51,12 +53,18 @@ export const Nudge: React.FC<NudgeProps> = ({
   return (
     <div
       className={`nudge-wrapper ${className ?? ""}`}
-      style={{ borderRadius: ringBorderRadius, display: "inline-block" }}
+      style={{
+        borderRadius: ringBorderRadius,
+        display: "inline-block",
+        position: "relative",
+        zIndex,
+      }}
     >
       {visible && (
         <div
           className={`nudge-ring ${ringClassName ?? ""}`}
           style={{
+            zIndex,
             borderColor: ringColor,
             top: -clampedRingSize,
             left: -clampedRingSize,
@@ -77,6 +85,7 @@ export const Nudge: React.FC<NudgeProps> = ({
             tooltipClassName ?? ""
           }`}
           style={{
+            zIndex,
             backgroundColor: tooltipBgColor,
             color: tooltipTextColor,
             fontSize: tooltipFontSize,
