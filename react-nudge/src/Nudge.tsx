@@ -21,6 +21,7 @@ type NudgeProps = {
   className?: string;
   tooltipClassName?: string;
   ringClassName?: string;
+  persistent?: boolean;
 };
 
 export const Nudge: React.FC<NudgeProps> = ({
@@ -40,13 +41,15 @@ export const Nudge: React.FC<NudgeProps> = ({
   className,
   tooltipClassName,
   ringClassName,
+  persistent = false,
 }) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    if (persistent) return;
     const timer = setTimeout(() => setVisible(false), duration);
     return () => clearTimeout(timer);
-  }, [duration]);
+  }, [duration, persistent]);
 
   const clampedRingSize = Math.min(Math.max(ringSize, 0), 20);
 
